@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { MaterialModule } from './material.module';
 
 import { AppComponent } from './app.component';
 import { TaskListComponent } from './task-list/task-list.component';
@@ -14,8 +14,10 @@ import { ScheduleChartComponent } from './schedule-chart/schedule-chart.componen
     ScheduleChartComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MaterialModule
   ],
+  exports: [TaskListComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
