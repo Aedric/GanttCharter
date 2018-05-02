@@ -1,12 +1,12 @@
 import { async, ComponentFixture, TestBed, inject } from '@angular/core/testing';
 
-import { TaskListComponentComponent } from './task-list-component.component';
+import { TaskListComponent } from './task-list.component';
 import { SchedulingService } from '../scheduling.service';
 import { SchedulingStubService } from '../scheduling-stub.service';
 
 describe('TaskListComponentComponent', () => {
-  let component: TaskListComponentComponent;
-  let fixture: ComponentFixture<TaskListComponentComponent>;
+  let component: TaskListComponent;
+  let fixture: ComponentFixture<TaskListComponent>;
   let schedulingService: SchedulingService;
 
   beforeEach(async(() => {
@@ -15,13 +15,13 @@ describe('TaskListComponentComponent', () => {
       providers: [
         {provide: SchedulingService, useValue:  this.schedulingService}
       ],
-      declarations: [ TaskListComponentComponent ]
+      declarations: [ TaskListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TaskListComponentComponent);
+    fixture = TestBed.createComponent(TaskListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
