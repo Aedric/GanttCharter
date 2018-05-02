@@ -8,10 +8,23 @@ import { Task } from '../scheduling.service';
 })
 export class TaskListComponent implements OnInit {
 
-  columns: any[];
+  task: Task;
+  tasks: Task[];
+  TASK_DATA: Task[];
+
+  dataSource = TEST_DATA;
+  displayedColumns = ['name', 'dependencies', 'duration', 'resources'];
 
   constructor() { }
+
+  addTask(newTask) {
+
+  }
   ngOnInit() {
   }
 
 }
+
+const TEST_DATA: Task[] = [
+  {name: 'Task1', dependencies: [], resources: [], duration: 6 }
+];

@@ -1,7 +1,31 @@
 <mat-card id="task-list">
-  <mat-list>
-    <mat-list-item> task1 </mat-list-item>
-    <mat-list-item> task2 </mat-list-item>
-    <mat-list-item> task3 </mat-list-item>
-  </mat-list>
+  <mat-table #table [dataSource]="dataSource">
+
+    <!-- name column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Name</mat-header-cell>
+      <mat-cell *matCellDef="let task"> {{task.name}} </mat-cell>
+    </ng-container>
+
+    <!-- dependencies column -->
+    <ng-container matColumnDef="dependencies">
+      <mat-header-cell *matHeaderCellDef> Dependencies</mat-header-cell>
+      <mat-cell *matCellDef="let task">{{task.dependencies}} </mat-cell>
+    </ng-container>
+
+    <!-- duration column -->
+    <ng-container matColumnDef="duration">
+      <mat-header-cell *matHeaderCellDef> Duration</mat-header-cell>
+      <mat-cell *matCellDef="let task">{{task.duration}} </mat-cell>
+    </ng-container>
+
+    <!-- resources column -->
+    <ng-container matColumnDef="resources">
+      <mat-header-cell *matHeaderCellDef> Resources</mat-header-cell>
+      <mat-cell *matCellDef="let task">{{task.resources}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
 </mat-card>
