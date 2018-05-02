@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 
-class ScheduleBlock {
+export class ScheduleBlock {
 
 }
 
-class Resource {
+export class Resource {
 
 }
 
-class Task {
+export class Task {
 
   constructor(
     public name: string,
@@ -22,5 +22,9 @@ class Task {
 export class SchedulingService {
 
   constructor() { }
+
+  scheduleTasks (tasks: Task[]) {
+
+  }
 
 }
