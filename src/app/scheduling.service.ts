@@ -1,9 +1,5 @@
 import { Injectable } from '@angular/core';
 
-export class ScheduleBlock {
-
-}
-
 export class Resource {
 
 }
@@ -42,7 +38,7 @@ export class SchedulingService {
   constructor() { }
 
   scheduleTasks (tasks: Task[]): ScheduledTask[] {
-
+    return [];
   }
 
 }
