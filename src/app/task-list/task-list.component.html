@@ -1,31 +1,36 @@
-<mat-card id="task-list">
-  <mat-table #table [dataSource]="dataSource">
+<div id=task-list>
+  <mat-card>
+    <div class="basic-container">
+      <mat-table #table [dataSource]="dataSource">
 
-    <!-- name column -->
-    <ng-container matColumnDef="name">
-      <mat-header-cell *matHeaderCellDef> Name</mat-header-cell>
-      <mat-cell *matCellDef="let task"> {{task.name}} </mat-cell>
-    </ng-container>
+        <!-- name column -->
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef> Name</mat-header-cell>
+          <mat-cell *matCellDef="let task"> {{task.name}} </mat-cell>
+        </ng-container>
 
-    <!-- dependencies column -->
-    <ng-container matColumnDef="dependencies">
-      <mat-header-cell *matHeaderCellDef> Dependencies</mat-header-cell>
-      <mat-cell *matCellDef="let task">{{task.dependencies}} </mat-cell>
-    </ng-container>
+        <!-- dependencies column -->
+        <ng-container matColumnDef="dependencies">
+          <mat-header-cell *matHeaderCellDef> Dependencies</mat-header-cell>
+          <mat-cell *matCellDef="let task">{{task.dependencies}} </mat-cell>
+        </ng-container>
 
-    <!-- duration column -->
-    <ng-container matColumnDef="duration">
-      <mat-header-cell *matHeaderCellDef> Duration</mat-header-cell>
-      <mat-cell *matCellDef="let task">{{task.duration}} </mat-cell>
-    </ng-container>
+        <!-- duration column -->
+        <ng-container matColumnDef="duration">
+          <mat-header-cell *matHeaderCellDef> Duration</mat-header-cell>
+          <mat-cell *matCellDef="let task">{{task.duration}} </mat-cell>
+        </ng-container>
 
-    <!-- resources column -->
-    <ng-container matColumnDef="resources">
-      <mat-header-cell *matHeaderCellDef> Resources</mat-header-cell>
-      <mat-cell *matCellDef="let task">{{task.resources}} </mat-cell>
-    </ng-container>
+        <!-- resources column -->
+        <ng-container matColumnDef="resources">
+          <mat-header-cell *matHeaderCellDef> Resources</mat-header-cell>
+          <mat-cell *matCellDef="let task">{{task.resources}} </mat-cell>
+        </ng-container>
 
-    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-  </mat-table>
-</mat-card>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+    </div>
+  <button mat-button>Submit</button>
+  </mat-card>
+</div>
