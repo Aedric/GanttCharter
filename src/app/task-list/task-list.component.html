@@ -1,6 +1,7 @@
 <div id=task-list>
-  <mat-card>
-    <div class="basic-container">
+  <mat-card class="simple-container">
+    <mat-card-title>Tasks</mat-card-title>
+    <mat-card-content class="basic-container">
       <mat-table #table [dataSource]="dataSource">
 
         <!-- name column -->
@@ -30,7 +31,8 @@
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
         <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
       </mat-table>
-    </div>
-  <button mat-button>Submit</button>
+      <button mat-button>Submit</button>
+      <button mat-button>Cancel</button>
+    </mat-card-content>
   </mat-card>
 </div>
