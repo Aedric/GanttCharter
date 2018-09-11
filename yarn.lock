@@ -171,6 +171,12 @@
   dependencies:
     tslib "^1.7.1"
 
+"@ng-select/ng-select@^1.4.0":
+  version "1.4.0"
+  resolved "https://purecloud.artifactoryonline.com/purecloud/api/npm/inin-internal-npm/@ng-select/ng-select/-/ng-select-1.4.0.tgz?dl=https://registry.yarnpkg.com/@ng-select/ng-select/-/ng-select-1.4.0.tgz#39e49fc25565e31c7e0d86d2cf0c4a281e2fc72c"
+  dependencies:
+    tslib "^1.7.1"
+
 "@ngtools/json-schema@1.2.0":
   version "1.2.0"
   resolved "https://purecloud.artifactoryonline.com/purecloud/api/npm/inin-internal-npm/@ngtools/json-schema/-/json-schema-1.2.0.tgz?dl=https://registry.yarnpkg.com/@ngtools/json-schema/-/json-schema-1.2.0.tgz#06e5ecd29e9a37d260a447dd873ea2becd228c4f"

@@ -9,11 +9,12 @@ import { Task } from '../scheduling.service';
 export class TaskListComponent implements OnInit {
 
   task: Task;
-  tasks: Task[];
   TASK_DATA: Task[];
+  dependencies: string[];
+
 
   dataSource = TEST_DATA;
-  displayedColumns = ['name', 'dependencies', 'duration', 'resources'];
+  displayedColumns = ['name', 'dependencies', 'resources', 'duration'];
 
   constructor() { }
 
@@ -21,6 +22,9 @@ export class TaskListComponent implements OnInit {
 
   }
   ngOnInit() {
+    this.task.dependencies = [
+
+    ];
   }
 
 }

@@ -1,4 +1,4 @@
-<div id=task-list>
+<div id=task-list *ngIf="Task">
   <mat-card class="simple-container">
     <mat-card-title>Tasks</mat-card-title>
     <mat-card-content class="basic-container">
@@ -16,23 +16,31 @@
           <mat-cell *matCellDef="let task">{{task.dependencies}} </mat-cell>
         </ng-container>
 
-        <!-- duration column -->
-        <ng-container matColumnDef="duration">
-          <mat-header-cell *matHeaderCellDef> Duration</mat-header-cell>
-          <mat-cell *matCellDef="let task">{{task.duration}} </mat-cell>
-        </ng-container>
-
         <!-- resources column -->
         <ng-container matColumnDef="resources">
           <mat-header-cell *matHeaderCellDef> Resources</mat-header-cell>
           <mat-cell *matCellDef="let task">{{task.resources}} </mat-cell>
         </ng-container>
 
+        <!-- duration column -->
+        <ng-container matColumnDef="duration">
+          <mat-header-cell *matHeaderCellDef> Duration</mat-header-cell>
+          <mat-cell *matCellDef="let task">{{task.duration}} </mat-cell>
+        </ng-container>
+
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
         <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
       </mat-table>
-      <button mat-button>Submit</button>
-      <button mat-button>Cancel</button>
+
     </mat-card-content>
+    <mat-form-field><input matInput type="text" placeholder="Name"></mat-form-field>
+    <mat-form-field><input matInput type="text" placeholder="Duration"></mat-form-field>
+    <mat-form-field>
+      <ng-select [items]="dependencies" bindLabel="Dependencies" [(ngModel)]="task.dependencies"></ng-select>
+    </mat-form-field>
+    <mat-form-field><input matInput type="text" placeholder="Resources"></mat-form-field>
+    <br>
+    <button mat-button>Submit</button>
+    <button mat-button>Cancel</button>
   </mat-card>
 </div>
